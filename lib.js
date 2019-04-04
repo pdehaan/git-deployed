@@ -10,7 +10,7 @@ async function deployed(url) {
   const [owner, repo] = versionJson.source.replace("https://github.com/", "").split("/", 2);
   const commit = await getCommitInfo(owner, repo, versionJson.commit);
   commit.compare_url = compareUrl;
-  const data = Object.assign({}, versionJson, {git: commit}, {url});
+  const data = Object.assign({url}, versionJson, {commit});
   return data;
 }
 

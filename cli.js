@@ -13,5 +13,5 @@ main(...argv);
 
 async function main(uri) {
   const res = await lib.deployed(uri);
-  console.log(res);
+  console.log(JSON.stringify(res, null, 2));
 }
