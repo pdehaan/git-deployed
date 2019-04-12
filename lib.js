@@ -1,7 +1,9 @@
 const axios = require("axios");
 
 module.exports = {
-  deployed
+  deployed,
+  getCommitInfo,
+  getVersionJson
 };
 
 async function deployed(url) {
@@ -20,6 +22,9 @@ async function _fetch(url) {
 }
 
 async function getVersionJson(url) {
+  if (!url.endsWith("/__version__")) {
+    url = new URL("/__version__", url).href;
+  }
   return _fetch(url);
 }
 

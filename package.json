@@ -12,7 +12,7 @@
   "homepage": "https://github.com/pdehaan/git-deployed#readme",
   "keywords": [],
   "license": "MPL-2.0",
-  "main": "index.js",
+  "main": "lib.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pdehaan/git-deployed.git"
